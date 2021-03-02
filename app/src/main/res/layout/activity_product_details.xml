@@ -4,37 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.MainActivity">
+    tools:context=".ui.activities.ProductDetailsActivity">
 
-    <EditText
-        android:id="@+id/EtBarCode"
+    <TextView
+        android:id="@+id/TvBarCode"
         android:layout_height="160px"
         android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_centerInParent="true"
-        android:inputType="number"
         android:layout_margin="50px"
-        android:text="737628064502"
+        android:gravity="center_vertical"
+        android:background="@drawable/border_style"/>
+
+    <TextView
+        android:id="@+id/EtExpiryDate"
+        android:layout_height="160px"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvBarCode"
+        android:layout_centerInParent="true"
+        android:focusable="false"
+        android:layout_margin="50px"
+        android:gravity="center_vertical"
         android:background="@drawable/border_style"/>
 
     <Button
-        android:id="@+id/btnGenerateCode"
+        android:id="@+id/btnConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Scan code"
-        app:layout_constraintTop_toBottomOf="@+id/EtBarCode"
+        android:text="Confirm code"
+        app:layout_constraintTop_toBottomOf="@+id/EtExpiryDate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnViewAll"/>
-
-    <Button
-        android:id="@+id/btnViewAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="View all"
-        app:layout_constraintTop_toBottomOf="@+id/EtBarCode"
-        app:layout_constraintStart_toEndOf="@+id/btnGenerateCode"
         app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
