@@ -1,4 +1,4 @@
-package com.example.cbandroidtest.activities
+package com.example.cbandroidtest.ui.activities
 
 import junit.framework.TestCase
 

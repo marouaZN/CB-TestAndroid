@@ -1,9 +1,6 @@
-package com.example.cbandroidtest.RoomDatabase
+package com.example.cbandroidtest.data.RoomDatabase
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.example.cbandroidtest.data.models.ProductModel
 
 @Dao
@@ -14,6 +11,12 @@ interface ProductDao {
     @Insert
     fun insertAll(vararg products: ProductModel)
 
+    @Query("SELECT * FROM productmodel where code = :code limit 1")
+    fun findByCode(code: Long): ProductModel
+
     @Delete
     fun delete(product: ProductModel)
+
+    @Update
+    fun updatExpirencyDate(vararg products: ProductModel)
 }

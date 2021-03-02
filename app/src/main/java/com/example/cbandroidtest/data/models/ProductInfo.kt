@@ -1,4 +1,4 @@
-package com.example.cbandroidtest.models
+package com.example.cbandroidtest.data.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

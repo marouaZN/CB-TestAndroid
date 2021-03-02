@@ -1,4 +1,4 @@
-package com.example.cbandroidtest.api
+package com.example.cbandroidtest.data.api
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -8,7 +8,7 @@ object ServiceBuilder {
     private val client = OkHttpClient.Builder().build()
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("https://world.openfoodfacts.org") // change this IP for testing by your actual machine IP
+        .baseUrl("https://world.openfoodfacts.org")
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
         .build()

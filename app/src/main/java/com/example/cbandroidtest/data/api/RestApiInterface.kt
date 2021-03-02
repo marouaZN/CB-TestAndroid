@@ -1,4 +1,4 @@
-package com.example.cbandroidtest.api
+package com.example.cbandroidtest.data.api
 
 import com.example.cbandroidtest.data.models.ProductModel
 import retrofit2.Call

@@ -1,16 +1,11 @@
-package com.example.cbandroidtest.models
+package com.example.cbandroidtest.data.models
 
 import androidx.room.*
-import androidx.room.ForeignKey.CASCADE
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "Foo",
-    foreignKeys = [
-        ForeignKey(entity = ProductInfo::class,
-            parentColumns = ["pid"],
-            childColumns = ["infoid"],
-            onDelete = CASCADE)])
+@Entity
 data class ProductModel(
-    @PrimaryKey val pid: Int,
-    @ColumnInfo(name = "code") @SerializedName("code")var barCode: Long?)
-  //  @SerializedName("product") val productInfo: ProductInfo?)
+    @PrimaryKey(autoGenerate = true) val pid: Int,
+    @ColumnInfo(name = "code") @SerializedName("code")var barCode: Long?,
+    @SerializedName("status_verbose")var statusVerbose: String,
+    @Embedded @SerializedName("product") var productInfo: ProductInfo?)
